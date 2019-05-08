@@ -10,7 +10,15 @@ Ext.define('FirstApp.view.main.MainController', {
     alias: 'controller.main',
 
     onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+        msg = 'Email: '+record.get('mail')+'  Phonenumber: '+record.get('phone');
+        Ext.toast({
+            html: msg,
+            closable: false,
+            align: 't',
+            slideInDuration: 400,
+            minWidth: 400
+        });
+        // Ext.Msg.alert('HEllo THere');
     },
 
     onConfirm: function (choice) {

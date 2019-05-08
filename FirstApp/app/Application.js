@@ -20,7 +20,7 @@ Ext.define('FirstApp.Application', {
     ],
 
     launch: function () {
-        
+        Ext.ariaWarn = Ext.emptyFn;
     },
 
     onAppUpdate: function () {

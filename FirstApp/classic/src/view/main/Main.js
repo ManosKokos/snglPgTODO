@@ -11,19 +11,54 @@ Ext.define('FirstApp.view.main.Main', {
 
     requires: [
         'Ext.plugin.Viewport',
-        'FirstApp.view.comps.centerComp'
+        'FirstApp.view.comps.centerComp',
+        'FirstApp.view.comps.EastComp'
     ],
 
     layout:'border',
     items:[
         {
             xtype:'centerComp',
+            style:{
+                overflow:'visible'
+            },
+            bodyStyle:{
+                overflow:'visible'
+            }
         },
         {
             xtype:'panel',
             region:'east',
-            title:'East',
-            width:300
+            // resizable:true,
+            collapsible:true,
+            widht:300,
+            style:{
+                'box-shadow': '-2px 0px 4px 4px #e2e2e2',
+                border:'2px solid #e2e2e2'
+            },
+            items:[
+                {   
+                    xtype:'container',
+                    layout:'vbox',
+                    items:[
+                        {
+                            xtype:'container',
+                            layout : {
+                                type  : 'hbox',
+                                pack  : 'center',
+                                align : 'middle'
+                            },
+                            items:[
+                                {
+                                xtype:'datefield',
+                                value:new Date()
+                            }]
+                        },
+                        {
+                            xtype:'eastComp',
+                    }   ]
+                    
+                }   ]
         }
     ]
 

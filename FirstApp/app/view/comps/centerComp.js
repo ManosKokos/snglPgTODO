@@ -4,6 +4,7 @@ Ext.define('FirstApp.view.comps.centerComp', {
 
     requires:['FirstApp.view.comps.roundContainer'],
     region: 'center',
+    title:'',
     layout : {
         type  : 'vbox',
         pack  : 'end',
@@ -11,10 +12,10 @@ Ext.define('FirstApp.view.comps.centerComp', {
     },
     bodyStyle:{
         "background-color":"#f2f2f2",
-        border:'0.05px solid #e0e0e0'
+        border:'0.05px solid #e0e0e0',
     },
     style:{
-        border:'0.05px solid #e0e0e0'
+        border:'0.05px solid #e0e0e0',
     },
     items:[
         {

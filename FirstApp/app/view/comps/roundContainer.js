@@ -1,6 +1,6 @@
 Ext.define('FirstApp.view.comps.roundContainer', {
     requires:['Ext.Button'],
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.container.Container',
     xtype:'roundContainer',
     layout:'absolute',
     width:400,
@@ -10,7 +10,8 @@ Ext.define('FirstApp.view.comps.roundContainer', {
     style:{
         'border-radius': '300px 300px 0px 0px',
         // 'border': 'solid 1px red',
-        'box-shadow': '0px -5px 5px grey'
+        'box-shadow': '0px -5px 5px grey',
+        overflow: 'visible'
     },
     bodyStyle:{
         'overflow': 'visible',
@@ -24,6 +25,7 @@ Ext.define('FirstApp.view.comps.roundContainer', {
             height:30,
             width:30,
             focusCls:'customB',
+        
             style:{
                 'border-radius':'15px',
                 border:'none',
@@ -33,6 +35,7 @@ Ext.define('FirstApp.view.comps.roundContainer', {
                 'background-repeat': 'no-repeat',
                 'background-color':'Transparent'
             },
+            
             listeners:{
                 click:function(cmp){
                     var w = Ext.get('outRoundCont');
@@ -56,7 +59,7 @@ Ext.define('FirstApp.view.comps.roundContainer', {
         {
             xtype:'button',
             x:180,
-            y:-10,
+            y:-15,
             height:40,
             width:40,
             style:{
@@ -74,8 +77,8 @@ Ext.define('FirstApp.view.comps.roundContainer', {
         },
         {
             xtype:'button',
-            x:250,
-            y:10,
+            x:270,
+            y:5,
             height:40,
             width:40,
             style:{
@@ -90,11 +93,12 @@ Ext.define('FirstApp.view.comps.roundContainer', {
                 'background-color':'red',
                 'box-shadow': '0px 0px 4px 4px #ffa0a0'
             },
+
         },
         {
             xtype:'button',
-            x:110,
-            y:10,
+            x:90,
+            y:5,
             height:40,
             width:40,
             style:{
