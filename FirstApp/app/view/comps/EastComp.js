@@ -5,9 +5,9 @@ Ext.define('FirstApp.view.comps.EastComp',{
     ],
     extend:'Ext.grid.Panel',
     xtype:'eastComp',
-
+    id:'eastComp',
     heigth:500,
-    width:300,
+    width:275,
     store:{
         type:'cStore'
     },
